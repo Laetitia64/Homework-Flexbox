@@ -1,0 +1,151 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+body {
+  background: fixed;
+}
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+a {
+  color: black;
+}
+header {
+  width: 100%;
+  padding: 20px 0px;
+  background-image: url(background.jpg);
+  border-bottom: 2px color(rgb(0, 247, 255));
+  height: 120px;
+  box-shadow: 0px 0px 15px darkgrey;
+}
+header h1 {
+  color: antiquewhite;
+  font-size: 1.5em;
+  width: 90%;
+  margin: 0 auto;
+}
+footer {
+  width: 100%;
+  padding: 20px 0px;
+  border-top: 2px darkgrey;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px darkgrey;
+}
+section h2 {
+  margin: 20px 0;
+  width: 90%;
+}
+section > div {
+  width: 90%;
+}
+
+.picture {
+  text-align: center;
+}
+.picture img {
+  width: 150px;
+  height: 150px;
+  border: 3px darkgrey;
+  box-shadow: 0px 0px 10px darkgrey;
+  border-radius: 50%;
+  margin-top: -80%;
+}
+.who {
+  border-bottom: 2px dashed darkgrey;
+}
+.who p:hover {
+  text-transform: uppercase;
+}
+.who a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto 30px auto;
+  color: black;
+  background-color: aqua;
+  border-radius: 5px;
+}
+.contact-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.contact-flex p:first-child {
+  flex: 0 0 40%;
+}
+.contact-flex p:last-child {
+  flex: 0 0 60%;
+}
+.social {
+  display: flex;
+}
+.button {
+  background-color: blue;
+  color: aliceblue;
+  border-color: aliceblue;
+  border-radius: 8px;
+}
+.button:hover {
+  opacity: 0.7;
+  cursor: grab;
+}
+.workexperience {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px darkgrey;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.worklogo {
+  flex: 0 0 25%;
+  max-width: 100px;
+}
+
+.experience-info {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 0 0 70%;
+  margin-left: auto;
+}
+
+.workexperience h3 {
+  font-size: 1.2em;
+}
+.workexperience h4 {
+  font-size: 1em;
+}
+.education h3 {
+  font-style: italic;
+}
+.education h4 {
+  color: blue;
+}
+.skill p {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.interest {
+  flex: 0 1 50%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.interest img {
+  box-shadow: 0 0 15px darkgrey;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: normal;
+}
