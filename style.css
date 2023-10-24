@@ -1,5 +1,10 @@
+@font-face {
+  font-family: myFont;
+  src: url(CaviarDreams.ttf);
+}
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: myFont;
   padding: 0px;
   margin: 0px;
   text-align: justify;
@@ -36,8 +41,7 @@ footer {
 }
 section {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
   padding-bottom: 20px;
   margin: 20px auto;
@@ -84,9 +88,11 @@ section > div {
 }
 .contact-flex p:first-child {
   flex: 0 0 40%;
+  min-width: auto;
 }
 .contact-flex p:last-child {
   flex: 0 0 60%;
+  min-width: auto;
 }
 .social {
   display: flex;
@@ -101,30 +107,26 @@ section > div {
   opacity: 0.7;
   cursor: grab;
 }
-.workexperience {
-  display: flex;
-  flex-flow: row wrap;
-  border-bottom: 1px darkgrey;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-.worklogo {
-  flex: 0 0 25%;
-  max-width: 100px;
-}
 
-.experience-info {
+.work {
+  max-width: 1750px;
   display: flex;
-  flex-flow: column wrap;
-  flex: 0 0 70%;
-  margin-left: auto;
+  flex-wrap: row wrap;
 }
-
-.workexperience h3 {
+.work img {
+  padding-right: 50px;
+  padding-left: 10px;
+}
+.worktext h3 {
   font-size: 1.2em;
 }
-.workexperience h4 {
+.worktext h4 {
   font-size: 1em;
+}
+.work,
+h3,
+h4 p {
+  padding-left: 20px;
 }
 .education h3 {
   font-style: italic;
@@ -132,20 +134,67 @@ section > div {
 .education h4 {
   color: blue;
 }
-.skill p {
+.row {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
 }
-.interest {
-  flex: 0 1 50%;
-  display: flex;
-  flex-flow: column wrap;
+
+.column {
+  flex: 50%;
 }
-.interest img {
-  box-shadow: 0 0 15px darkgrey;
+
+.column p:first-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.slide-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: auto;
+}
+.slider {
   display: flex;
-  justify-content: space-evenly;
-  align-items: normal;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border: radius 0.5em;
+}
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  #carousel img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
 }
